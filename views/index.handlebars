@@ -1,0 +1,42 @@
+<h1 style="text-align:center">
+  Hamburger</h1>
+
+<p style="text-align:center">Manage your hamburgers</p>
+
+
+
+  <div class="row">
+ 
+    <div class="alert alert-primary col-3 offset-2 ">
+           {{#each burgers}}
+      <p style="font:bolder">{{this.id}}:{{this.burger}}       <button data-id="{{this.id}}" class="devham">Devour</button></p>
+
+        {{/each}}
+    </div>
+
+    <div class="alert alert-success col-2 ">
+<h2>Add a Burger</h2>
+
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burger">Burger:</label>
+    <input type="text" id="burger" name="burger">
+  </div>
+
+
+  <button type="submit">Add Hamburger</button>
+</form>
+
+
+
+    </div>
+    <div class="alert alert-danger col-3">
+      {{#each devour}}
+     <p>{{this.id}}:{{this.burger}}
+
+        {{/each}}
+    </div>
+
+  </div>
+
